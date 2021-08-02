@@ -31,37 +31,33 @@ View(dados_co2_tidy)
 
 ```
 
-**Questão 01** 
-O seguinte Box Plot fornece informações sobre a distribuição de pesos das malas em um avião.
+**Questão 01** O seguinte Box Plot fornece informações sobre a distribuição de pesos das malas em um avião.
 
-**a)** 
+**a)**
 
 Ele não calculou o intervalo fora do block post, só calculou o intervalo entre q1 e q2, por isso esta incorreto.
 
-**b)** 
+**b)**
 
 15+2= 17
 
-**c)** 
+**c)**
 
 23-10= 13
 
-**d)** 
+**d)**
 
 55x24/240 = 5,5
 
-**Questão 02** 
-Uma prova foi aplicada em duas turmas distintas. Na primeira, com 30 alunos, a média aritmética das notas foi
-6.40. Na segunda, com 50 alunos, foi 5.20. A média aritmética das notas dos 80 alunos foi:
+**Questão 02** Uma prova foi aplicada em duas turmas distintas. Na primeira, com 30 alunos, a média aritmética das notas foi 6.40. Na segunda, com 50 alunos, foi 5.20. A média aritmética das notas dos 80 alunos foi:
 
 6,40x30 + 5,20x50 = 192+260/80 = 5,65
 
 resposta alternativa a)
 
-**Questão 03** 
-Considere os dados abaixo, onde a variável de interesse, X, é batimentos cardíacos por minuto (BAT/min).
+**Questão 03** Considere os dados abaixo, onde a variável de interesse, X, é batimentos cardíacos por minuto (BAT/min).
 
-**a)** 
+**a)**
 
 ```{r}
 dados <- c(68,70,72,58,90,110,68,70,72,80,
@@ -69,19 +65,20 @@ dados <- c(68,70,72,58,90,110,68,70,72,80,
   (110:58)
 
 ```
+
 **b)**
-  
-  media = 79,85
-  
-  mediana = 79,5
-  
-  primeiro quartil = 70
-  
-  terceiro quartil = 90
-  
-  desvio padrÃ£o = 4,46
-  
-**c)** 
+
+media = 79,85
+
+mediana = 79,5
+
+primeiro quartil = 70
+
+terceiro quartil = 90
+
+desvio padrÃ£o = 4,46
+
+**c)**
 
 Não, ambos os valores da media e mediana são proximos.
 
@@ -91,10 +88,9 @@ hist(dados, ylab = "Frequência Absoluta", xlab = "BAT/min", col = "blue",bolder
 
 ```
 
-**Questão 04** 
-No repositório de dados da disciplina no GitHub, dados_csv, analise o conjunto de dados frango_dieta.csv.
+**Questão 04** No repositório de dados da disciplina no GitHub, dados_csv, analise o conjunto de dados frango_dieta.csv.
 
-**a)** 
+**a)**
 
 Não pois ele é apresentado por 579 linhas, e um arquivo tidy e apresentado por 10.
 
@@ -104,7 +100,7 @@ Não pois ele é apresentado por 579 linhas, e um arquivo tidy e apresentado por
 mean(frango_dieta$peso)
 ```
 
-**c)** 
+**c)**
 
 ```{r}
 sd(frango_dieta$peso)
@@ -114,10 +110,9 @@ sd(frango_dieta$peso)
 
 Tempo, Peso, Frango, Dieta = Quantitativo Discreto
 
-**Questão 05** 
+**Questão 05**
 
 eu usaria a média pois, a média se baseia em todos os numeros da curva, enquanto a mediana se baseia apenas no central e nesse grafico há uma drastica subida e decida no inicio, então a media é o mais correto a se considerar.
-
 
 ```{r}
 #---------------------------------------------------------
@@ -135,15 +130,16 @@ lines(density(x, bw = 1), col = 'red', lwd = 3)
 #---------------------------------------------------------
 
 ```
+
 **Questão 06** Considere o banco de dados dados_co2.csv
 
-**a)** 
+**a)**
 
 **b)**
 
 Não, pois o tidy apresenta 10 linhas e a tabela em questão 39.
 
-**c)** 
+**c)**
 
 ```{r}
 dados_co2 %>%                
@@ -176,7 +172,6 @@ co2_tidy %>% glimpse()
 
 ```
 
-
 ```{r}
 #-------------------------------------------
 co2_tidy %>% # conjunto de dados
@@ -187,7 +182,7 @@ geom_line(color = "blue", size = 1)
 #-------------------------------------------
 ```
 
-**Questão 07** Considere a Tabela 1: 
+**Questão 07** Considere a Tabela 1:
 
 **a)**
 
@@ -205,21 +200,14 @@ peso e altura.
 
 **c)**
 
-Peso:
-Mediana= 66,5
-Média= 67,375
-Desvio padrão= 9,39
+Peso: Mediana= 66,5 Média= 67,375 Desvio padrão= 9,39
 
-Altura:
-Mediana= 169 
-Média = 166
-Desvio padrão= 6,34
+Altura: Mediana= 169 Média = 166 Desvio padrão= 6,34
 
-**d)** 
+**d)**
 
 Conforme a altura aumenta, o peso tende a aumentar proporcionalmente.
 
 ```{r}
 plot(tabela_1$"peso", tabela_1$"altura" , col = "blue", xlab = "peso", ylab = "altura", main = "tabela 1")
 ```
-
